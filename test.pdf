@@ -1,0 +1,241 @@
+Test of Point.intersect(Point)
+Case 1: 
+Point point1 = new Point(1, 2);
+Point point2 = new Point(1, 2);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Point point1 = new Point(1, 2);
+Point point3 = new Point(3, 4);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Point.intersect(Lineseg)
+Case 1: 
+Point point = new Point(1, 1);
+LineSeg lineSeg1 = new LineSeg(new Point(0, 0), new Point(2, 2));
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Point point = new Point(1, 1);
+LineSeg lineSeg2 = new LineSeg(new Point(2, 2), new Point(3, 3));
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Point.intersect(Rectangle)
+Case 1: 
+Point point = new Point(2, 2);
+Rectangle rectangle = new Rectangle(1, 3, 3, 1);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Point point = new Point(2, 6);
+Rectangle rectangle = new Rectangle(1, 3, 3, 1);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Point.intersect(Circle)
+Case 1: 
+Point point1 = new Point(1, 1);
+Circle circle = new Circle(new Point(2, 2), 1);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Point point1 = new Point(3, 3);
+Circle circle = new Circle(new Point(2, 2), 1);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of LineSeg.intersect(Point)
+Case 1: 
+Point point1 = new Point(1, 1);
+LineSeg lineSeg = new LineSeg(new Point(0, 0), new Point(2, 2));
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Point point3 = new Point(3, 3);
+LineSeg lineSeg = new LineSeg(new Point(0, 0), new Point(2, 2));
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of LineSeg.intersect(LineSeg)
+Case 1: 
+LineSeg lineSeg1 = new LineSeg(new Point(0, 0), new Point(2, 2));
+LineSeg lineSeg2 = new LineSeg(new Point(2, 2), new Point(3, 3));
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+LineSeg lineSeg2 = new LineSeg(new Point(2, 2), new Point(3, 3));
+LineSeg lineSeg3 = new LineSeg(new Point(3, 2), new Point(4, 2));
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of LineSeg.intersect(Rectangle)
+Case 1: 
+LineSeg lineSeg1 = new LineSeg(new Point(-3, 1), new Point(3, 1));
+Rectangle rectangle = new Rectangle(0, 2, 2, -1);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+LineSeg lineSeg3 = new LineSeg(new Point(-3, 3), new Point(3, 3));
+Rectangle rectangle = new Rectangle(-4, 4, 2, -1);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of LineSeg.intersect(Circle)
+Case 1: 
+LineSeg lineSeg1 = new LineSeg(new Point(0, 0), new Point(2, 2));
+Circle circle = new Circle(new Point(1, 1), 1);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+LineSeg lineSeg2 = new LineSeg(new Point(2, 2), new Point(3, 3));
+Circle circle = new Circle(new Point(1, 1), 1);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+
+Test of Circle.intersect(Point)
+Case 1: 
+Point point1 = new Point(2, 1);
+Circle circle = new Circle(new Point(2, 2), 1);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Point point2 = new Point(4, 4);
+Circle circle = new Circle(new Point(2, 2), 1);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Circle.intersect(Lineseg)
+Case 1: 
+LineSeg lineSeg1 = new LineSeg(new Point(0, 0), new Point(2, 2));
+Circle circle = new Circle(new Point(2, 2), 1);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+LineSeg lineSeg2 = new LineSeg(new Point(4, 4), new Point(4, 1));
+Circle circle = new Circle(new Point(2, 2),1) 
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Circle.intersect(Rectangle)
+Case 1: 
+Rectangle rectangle = new Rectangle(-3, 3, 3, -3)
+Circle circle = new Circle(new Point(0, 0), 3)
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Rectangle rectangle = new Rectangle(-3, 3, 3, -3)
+Circle circle = new Circle(new Point(6, 6), 2)
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+
+Test of Circle.intersect(Circle)
+Case 1: 
+Circle circle1 = new Circle(new Point(1, 1), 2);
+Circle circle2 = new Circle(new Point(4, 4), 1);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Circle circle1 = new Circle(new Point(1, 1), 2);
+Circle circle3 = new Circle(new Point(6, 6), 1);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Rectangle.intersect(Point)
+Case 1: 
+Rectangle rectangle = new Rectangle(0, 2, 2, 0);
+Point point = new Point(1, 1);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Rectangle rectangle = new Rectangle(0, 2, 2, 0);
+Point insidePoint = new Point(3, 3);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Rectangle.intersect(LineSeg)
+Case 1: 
+Rectangle rectangle = new Rectangle(0, 2, 2, 0);
+LineSeg Line1 = new LineSeg(new Point(1, 1), new Point(3, 1));
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Rectangle rectangle = new Rectangle(0, 2, 2, 0);
+LineSeg Line2 = new LineSeg(new Point(3, 3), new Point(4, 4));
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Rectangle.intersect(Rectangle)
+Case 1: 
+Rectangle rectangle1 = new Rectangle(1, 3, 3, 1);
+Rectangle rectangle2 = new Rectangle(2, 4, 4, 2); 
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Rectangle rectangle1 = new Rectangle(1, 3, 3, 1);
+Rectangle Rectangle3 = new Rectangle(5, 6, 6, 5);
+Expected Result: false
+Code Result: false
+Test Result: pass
+
+Test of Rectangle.intersect(Circle)
+Case 1: 
+Rectangle rectangle = new Rectangle(1, 3, 3, 1);
+Circle circle1 = new Circle(new Point(2, 2), 2);
+Expected Result: true
+Code Result: true
+Test Result: pass
+
+Case 2: 
+Rectangle rectangle = new Rectangle(1, 3, 3, 1);
+Circle circle2 = new Circle(new Point(5, 5), 1);
+Expected Result: false
+Code Result: false
+Test Result: pass
